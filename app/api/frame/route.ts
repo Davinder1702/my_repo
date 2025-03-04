@@ -2,13 +2,15 @@ import { NextRequest } from 'next/server';
 
 export async function POST(req: NextRequest): Promise<Response> {
   try {
+    const data = await req.json();
+    
     return new Response(
       JSON.stringify({
         frames: [
           {
             version: 'vNext',
-            image: 'https://i.imgur.com/YlZN7QB.png',
-            buttons: [{ label: 'Hello received!' }],
+            image: `${req.nextUrl.origin}/api/og`,
+            buttons: [{ label: 'Clicked!' }],
           },
         ],
       }),
