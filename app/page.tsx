@@ -7,7 +7,7 @@ export default async function Home() {
   const baseUrl = `${protocol}://${host}`;
 
   // Using a reliable public image URL
-  const imageUrl = 'https://i.imgur.com/YlZN7QB.png';
+  const imageUrl = 'https://www.istockphoto.com/resources/images/HomePage/Tiles/C5-NOV-iStock-2168900850.jpg';
 
   return (
     <>

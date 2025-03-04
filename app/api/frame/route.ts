@@ -3,7 +3,7 @@ import { NextRequest } from 'next/server';
 export async function POST(req: NextRequest): Promise<Response> {
   try {
     // Using the same reliable image URL
-    const imageUrl = 'https://i.imgur.com/YlZN7QB.png';
+    const imageUrl = 'https://www.istockphoto.com/resources/images/HomePage/Tiles/C5-NOV-iStock-2168900850.jpg';
     
     return new Response(
       JSON.stringify({
