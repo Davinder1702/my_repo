@@ -4,7 +4,7 @@ export default async function Home() {
   const headersList = await headers();
   const host = headersList.get('host');
   const protocol = process?.env?.NODE_ENV === 'development' ? 'http' : 'https';
-  const baseUrl = `${protocol}://${host}`;
+  const baseUrl = "https://my-repo-flax-144.vercel.app";
 
   // Using a reliable public image URL
   const imageUrl = 'https://www.istockphoto.com/resources/images/HomePage/Tiles/C5-NOV-iStock-2168900850.jpg';
