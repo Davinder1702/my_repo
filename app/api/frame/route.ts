@@ -2,14 +2,15 @@ import { NextRequest } from 'next/server';
 
 export async function POST(req: NextRequest): Promise<Response> {
   try {
-    const data = await req.json();
+    // Using the same reliable image URL
+    const imageUrl = 'https://i.imgur.com/YlZN7QB.png';
     
     return new Response(
       JSON.stringify({
         frames: [
           {
             version: 'vNext',
-            image: `${req.nextUrl.origin}/api/og`,
+            image: imageUrl,
             buttons: [{ label: 'Clicked!' }],
           },
         ],
@@ -18,6 +19,7 @@ export async function POST(req: NextRequest): Promise<Response> {
         status: 200,
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
         },
       }
     );
@@ -28,6 +30,7 @@ export async function POST(req: NextRequest): Promise<Response> {
         status: 500,
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
         },
       }
     );
